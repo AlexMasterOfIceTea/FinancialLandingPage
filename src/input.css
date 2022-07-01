@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+    /* set scroll padding correctly */
+    .scroll-in-content {
+        scroll-padding-left:max(1rem, calc((100vw - 1500px) / 2));
+    }
+
+    .scroll-in-content::before {
+        content: '';
+        flex-shrink: 0;
+        width: max(1rem, calc((100vw - 1500px) / 2));
+    }
+
+    .scroll-in-content::after {
+        content: '';
+        flex-shrink: 0;
+        width: max(1rem, calc((100vw - 1500px) / 2));
+    }
+
+@layer components{
+    .content{
+        @apply max-w-[1500px] mx-auto w-full p-4 ;
+    }
+}
+    
